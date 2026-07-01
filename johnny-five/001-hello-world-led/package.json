@@ -1,0 +1,17 @@
+{
+  "name": "hello-world-led",
+  "version": "1.0.0",
+  "description": "",
+  "main": "example.js",
+  "scripts": {
+    "start": "node ./example.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "firmata": "^2.3.0",
+    "johnny-five": "^2.1.0"
+  }
+}

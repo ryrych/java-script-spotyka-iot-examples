@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Temperature</title>
+    <script src="/socket.io/socket.io.js"></script>
+    <link href="css/main.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <main>
+      <section class="termometer-section">
+        <div class="chart-container">
+          <canvas id="myChart"></canvas>
+        </div>
+
+        <div class="termometer-wrapper">
+          <div class="termometer">
+            <div class="temperature" style="height: 0" data-value="0°C"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="info-box">
+        <h1>Temperature</h1>
+        <p>Read via simple <kbd>LM35</kbd> thermometer.</p>
+      </section>
+    </main>
+  </body>
+
+  <script src="js/main.js"></script>
+</html>
