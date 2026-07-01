@@ -8,11 +8,11 @@ Przykłady użycia języka JavaScript w kontekście urządzeń _IoT_.
 └── web-serial-api
 ```
 
-- `./johnny-five`: przykłady do warsztatu [JavaScript spotyka iOT](https://javascript-i-iot.netlify.app/
+`./johnny-five`: przykłady do warsztatu [JavaScript spotyka iOT](https://javascript-i-iot.netlify.app/
 )
-- `./web-serial-api`: przykłady w [Web Serial API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Serial_API)
+`./web-serial-api`: przykłady w [Web Serial API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Serial_API)
 
---
+---
 
 Przykłady zawarte w katalogu `./johnny-five` początkowo pochodziły z roku 2023 i były stworzone jako przykłady w warsztacie [JavaScript spotyka iOT](https://javascript-i-iot.netlify.app/). W czerwcu 2026 zostały przejrzane, poprawione i przetestowane na _Arduino UNO_.
 
