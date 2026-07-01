@@ -2,9 +2,6 @@
 
 ```sh
 nvm use 24
-```
-
-```sh
 npm install
 ```
 
