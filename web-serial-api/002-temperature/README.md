@@ -2,8 +2,8 @@
 
 Example of reading temperature. I used *ESP8266* and *LM35* thermometer connected to `A0` pin.
 
-![Before device is paired][./img/temperature-connect.png]
-![Temperature after device is connected][./img/temperature-connected.png]
+![Before device is paired](./img/temperature-connect.png)
+![Temperature after device is connected](./img/temperature-connected.png)
 
 Compile and upload `./temperature/temperature.ino`.
 
