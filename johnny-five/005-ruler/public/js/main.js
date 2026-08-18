@@ -1,5 +1,6 @@
 let socket;
 const EVENT_LENGTH_CHANGED = "lengthChanged";
+const MAX_RANGE_CM = 20;
 let rulerValueElement;
 let rulerValueProgressElement;
 
@@ -17,8 +18,9 @@ function initView() {
 }
 
 function updateView(value = 0) {
+  const clamped = Math.min(Math.max(value, 0), MAX_RANGE_CM);
   rulerValueElement.innerText = value;
-  rulerValueProgressElement.style.width = `${(value / 20) * 100}%`;
+  rulerValueProgressElement.style.width = `${(clamped / MAX_RANGE_CM) * 100}%`;
 }
 
 (function () {

@@ -13,6 +13,17 @@ app.use(cors());
 
 const SERVER_PORT = process.env.SERVER_PORT;
 
+let board;
+const Five = require("johnny-five");
+const BOARD_PORT = process.env.BOARD_PORT;
+
+if (!SERVER_PORT || !BOARD_PORT) {
+  console.error(
+    "Missing SERVER_PORT or BOARD_PORT in .env — copy .env.example to .env and fill it in.",
+  );
+  process.exit(1);
+}
+
 io = sio(server);
 
 app.get("/", (req, res) => {
@@ -23,12 +34,12 @@ server.listen(SERVER_PORT, () => {
   console.log(`Server is up and running at: http://localhost:${SERVER_PORT}`);
 });
 
-let board;
-const Five = require("johnny-five");
-const BOARD_PORT = process.env.BOARD_PORT;
-
 board = new Five.Board({
   port: BOARD_PORT,
+});
+
+board.on("error", (err) => {
+  console.error("Board error:", err.message || err);
 });
 
 function onReady() {
@@ -48,8 +59,8 @@ function onReady() {
   io.on("connection", function (socket) {
     console.log(`Client connected: ${socket.id}`);
 
-    socket.on("disconnect", function (reason, socket) {
-      console.log(`Client disconnected  with reason: ${reason}`);
+    socket.on("disconnect", function (reason) {
+      console.log(`Client disconnected with reason: ${reason}`);
     });
   });
 }
