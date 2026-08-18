@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ruler with ultrasonic sensor</title>
+    <script src="/socket.io/socket.io.js"></script>
+    <link href="css/main.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <main>
+      <section class="info-box">
+        <h1>Ultrasonic ruler</h1>
+        <p>with <kbd>HC-SR04</kbd> sensor</p>
+      </section>
+
+      <div class="ruler-wrapper">
+        <div class="ruler">
+          <span class="ruler-value-progress" aria-hidden="true"></span>
+          <span class="ruler-value">
+            <span class="ruler-value-value">0</span>
+            <span class="ruler-value-unit">cm</span>
+          </span>
+        </div>
+      </div>
+
+      <div class="grid-wrapper">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          class="grid"
+          viewBox="0 0 304 704"
+        >
+          <path
+            stroke="currentColor"
+            stroke-width="4"
+            d="M103 703 123.5 2M202 702.268 180.5 2m100.185 466.667H23.315m235.869-233.334H44.815M3 702.804 66.5 2h171l64 700z"
+          />
+        </svg>
+      </div>
+    </main>
+  </body>
+
+  <script src="js/main.js"></script>
+</html>
