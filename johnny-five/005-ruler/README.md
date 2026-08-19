@@ -1,5 +1,9 @@
 # README
 
+![](docs/005-ruler-diagram.svg)
+
+## Setup
+
 ```sh
 # Use node v18.15.0
 nvm use 18.15.0
